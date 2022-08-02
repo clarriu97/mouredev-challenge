@@ -10,27 +10,34 @@ The repository will follow the next structure:
 
 ```
 -- mouredev-challenge
+ |-- challenge0
+   |-- solution.py
+   |-- input.txt
+   |-- output.txt
+   |-- README.md
  |-- challenge1
    |-- solution.py
    |-- input.txt
    |-- output.txt
- |-- challenge2
-   |-- solution.py
-   |-- input.txt
-   |-- output.txt
+   |-- README.md
  .
  .
  .
 ```
 
-With this structure, we can set the input of our script and run it with the command:
+With this structure:
 
-```bash
-cat input.txt | python solution.py
-```
+- You have a `README.md` file inside each challenge, with the description.
+- You can run a particular script inside its folder with the command:
+  ```bash
+  python solution.py
+  ```
+- You can set the input of our script in case it has, and run it with the command:
+  ```bash
+  cat input.txt | python solution.py
+  ```
+- In case we have an output for the desired input, you can test the solution with the command:
 
-And, in case we have an output for the desired input, we can test our solution with the command:
-
-```bash
-cat input.txt | python solution.py > pred.txt ; echo "Script output is: "; cat pred.txt; echo "Comparison with required output"; diff output.txt pred.txt; rm pred.txt
-```
+  ```bash
+  cat input.txt | python solution.py > pred.txt ; echo "Script output is: "; cat pred.txt; echo "Comparison with required output"; diff output.txt pred.txt; rm pred.txt
+  ```
